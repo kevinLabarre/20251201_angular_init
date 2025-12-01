@@ -1,12 +1,30 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+
+
+// Un composant contient au minimum :
+// - un sélecteur
+// - un template (template ou templateUrl)
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.html',
+  // template: `
+  // <h1>Bienvenue sur angular :) </h1>
+  // `,
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('angular_init');
+
+  title: string = "Bienvenue sur angular :) "
+  myNumber: number = 0;
+  myBoolean: boolean = true;
+
+  displayTitle() {
+    return "Bienvenue sur angular :) "
+  }
+
+  get titleGetter() {
+    return "Bienvenue sur angular (en passant par le getter) :) "
+  }
+
 }
