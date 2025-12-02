@@ -1,8 +1,18 @@
 <section>
   <h1>Compteur</h1>
+
+  <!-- Quand on utilise zoneJs-->
+
   <p>{{count}}</p>
 
   <button (click)="handleIncrement()">+</button>
   <button (click)="handleDecrement()">-</button>
 
+  <!-- Quand on utilise les signaux -->
+  <p>{{countSignal()}}</p>
+
+  <button (click)="handleIncrementSignal()">+</button>
+  <button (click)="handleDecrementSignal()">-</button>
+
+  <button (click)="handleReset()">Reset</button>
 </section>

@@ -4,11 +4,13 @@ import { AngularFondamentaux } from '../pages/angular-fondamentaux/angular-fonda
 import { BindDesProprietesEtEvenements } from '../pages/bind-des-proprietes-et-evenements/bind-des-proprietes-et-evenements';
 import { PassageDeDonneesEntreComposants } from '../pages/passage-de-donnees-entre-composants/passage-de-donnees-entre-composants';
 import { Compteur } from '../pages/compteur/compteur';
+import { EffectEtComputed } from '../pages/effect-et-computed/effect-et-computed';
 
 export const routes: Routes = [
   { path: "", component: HomePage, title: "Accueil" },
   { path: "angular-fondamentaux", component: AngularFondamentaux, title: "angular fondamentaux" },
   { path: "bind-proprietes-et-evenements", component: BindDesProprietesEtEvenements, title: "bind proprietes et evenements" },
   { path: "passage-de-donnees-entre-composants", component: PassageDeDonneesEntreComposants, title: "Passage de données entre composants" },
-  { path: "compteur", component: Compteur, title: "compteur" }
+  { path: "compteur", component: Compteur, title: "compteur" },
+  { path: "effect-et-computed", component: EffectEtComputed, title: "effect et computed" }
 ];

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Signal, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app-compteur',
@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './compteur.css',
 })
 export class Compteur {
+
+  // Quand on utilise zoneJs
+
   count: number = 0;
 
   handleIncrement() {
@@ -17,6 +20,21 @@ export class Compteur {
   handleDecrement() {
     this.count--
     console.log(this.count)
+  }
+
+  // Quand on utilise les signaux
+  countSignal: WritableSignal<number> = signal(0)
+
+  handleIncrementSignal() {
+    this.countSignal.update((prev) => prev + 1)
+  }
+
+  handleDecrementSignal() {
+    this.countSignal.update((prev) => prev - 1)
+  }
+
+  handleReset() {
+    this.countSignal.set(0)
   }
 
 }
