@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { IUser } from '../../interfaces/IUser';
 import { BankAccountEnum } from '../../enums/BankAccountEnum';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-angular-fondamentaux',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './angular-fondamentaux.html',
   styleUrl: './angular-fondamentaux.css',
 })
 export class AngularFondamentaux {
 
-  displayText: boolean = false
+  displayText: boolean = true
 
   user?: { firstName: string, lastName: string } = {
     firstName: "John",

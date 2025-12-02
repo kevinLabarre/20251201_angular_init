@@ -35,4 +35,15 @@
   <p>{{i}} -- {{fruit}}</p>
   }
 
+  <p><strong>Ancienne syntaxe: </strong></p>
+  <!-- Ancienne syntaxe -->
+  <p *ngIf="user">{{user.firstName}}</p>
+
+  <ul *ngFor="let u of users">
+    <li>Prénom : {{u.firstName}}</li>
+    <li>Nom : {{u.lastName}}</li>
+    <li>Age : {{u.age}}</li>
+    <li>Compte : {{u.bankAccount}}</li>
+  </ul>
+
 </section>
