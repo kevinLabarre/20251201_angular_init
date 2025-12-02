@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { Navbar } from "../components/navbar/navbar";
+
 
 
 // Un composant contient au minimum :
@@ -11,20 +14,9 @@ import { Component } from '@angular/core';
   // template: `
   // <h1>Bienvenue sur angular :) </h1>
   // `,
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+  imports: [RouterOutlet, Navbar]
 })
 export class App {
-
-  title: string = "Bienvenue sur angular :) "
-  myNumber: number = 0;
-  myBoolean: boolean = true;
-
-  displayTitle() {
-    return "Bienvenue sur angular :) "
-  }
-
-  get titleGetter() {
-    return "Bienvenue sur angular (en passant par le getter) :) "
-  }
 
 }

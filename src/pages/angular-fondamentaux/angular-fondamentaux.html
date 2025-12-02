@@ -1,0 +1,38 @@
+<section>
+  <h1>Angular fondamentaux</h1>
+
+  <h2>Directive {{"@if"}}</h2>
+
+  @if(displayText){
+  <p>Texte à afficher </p>
+  }
+
+  @if(displayText){
+  <p>Texte à afficher </p>
+  } @else {
+  <p>Texte non affiché</p>
+  }
+
+  @if(user){
+  <p>{{user.firstName}}</p>
+  }
+
+  <h2>Directive {{"@for"}}</h2>
+
+  @for(u of users ; track u.id){
+  <ul>
+    <li>Prénom : {{u.firstName}}</li>
+    <li>Nom : {{u.lastName}}</li>
+    <li>Age : {{u.age}}</li>
+    <li>Compte : {{u.bankAccount}}</li>
+  </ul>
+  }
+
+  <!-- Angular conseille d'utiliser l'index pour traquer
+    uniquement des listes statiques
+  -->
+  @for(fruit of fruits ; let i = $index ; track i){
+  <p>{{i}} -- {{fruit}}</p>
+  }
+
+</section>
