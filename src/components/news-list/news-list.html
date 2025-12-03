@@ -1,0 +1,12 @@
+<section>
+  <h1>Mes news: </h1>
+
+  @for(news of newsList ; track news.id){
+  <ul>
+    <li>{{news.titre}}</li>
+    <li>{{news.texte}}</li>
+    <li>date publication: {{news.datePublication}}</li>
+  </ul>
+  }
+
+</section>

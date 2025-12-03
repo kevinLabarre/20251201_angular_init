@@ -8,6 +8,7 @@ import { EffectEtComputed } from '../pages/effect-et-computed/effect-et-computed
 import { InputAvecNgModel } from '../pages/input-avec-ng-model/input-avec-ng-model';
 import { ExerciceFruits } from '../pages/exercice-fruits/exercice-fruits';
 import { RequeteApi } from '../pages/requete-api/requete-api';
+import { ServicePage } from '../pages/service-page/service-page';
 
 export const routes: Routes = [
   { path: "", component: HomePage, title: "Accueil" },
@@ -18,5 +19,6 @@ export const routes: Routes = [
   { path: "effect-et-computed", component: EffectEtComputed, title: "effect et computed" },
   { path: "input-avec-ngModel", component: InputAvecNgModel, title: "input avec ngModel" },
   { path: "exercice-fruits", component: ExerciceFruits, title: "Exercice fruits / légumes" },
-  { path: "requete-api", component: RequeteApi, title: "requeteApi" },
+  { path: "requete-api", component: RequeteApi, title: "les requetes Api" },
+  { path: "service", component: ServicePage, title: "les services" }
 ];

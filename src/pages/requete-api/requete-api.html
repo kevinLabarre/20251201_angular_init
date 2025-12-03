@@ -5,6 +5,8 @@
     - npm install json-server
     - Créer un db.json à la racine du projet
     - Rajouter le script suivant dans le package.json:
+        "json-server": "json-server db.json"
+    - lancer le json-server avec "npm run json-server"
 
   </pre>
 
@@ -13,6 +15,18 @@
   <p>GET: pour 'obtenir' une ressource</p>
   <p>DELETE: pour supprimer une ressource</p>
 
+  <h2>Exemples: </h2>
 
+  @if(news){
+  <app-news-list [newsList]="news" />
+  }
+
+  <h2>Exemple avec signal: </h2>
+
+  @if(newsSignal().length > 0){
+  <app-news-list [newsList]="newsSignal()" />
+  }
+
+  <app-add-product />
 
 </section>

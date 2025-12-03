@@ -107,6 +107,24 @@
       "datePublication": "2023-12-01",
       "dateModification": null,
       "image": "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=800"
+    },
+    {
+      "id": "be18",
+      "titre": "Test",
+      "texte": "Test",
+      "image": "Test",
+      "categorie": "Test",
+      "datePublication": "Wed Dec 03 2025 16:55:39 GMT+0100 (heure normale d’Europe centrale)",
+      "dateModification": null
+    },
+    {
+      "id": "6af0",
+      "titre": "",
+      "texte": "",
+      "image": "",
+      "categorie": "",
+      "datePublication": "Wed Dec 03 2025 16:57:40 GMT+0100 (heure normale d’Europe centrale)",
+      "dateModification": null
     }
   ]
 }

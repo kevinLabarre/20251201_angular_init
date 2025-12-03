@@ -1,0 +1,15 @@
+<section>
+  <h1>Les services de angular</h1>
+
+  <h2>Exemple avec une liste directement créée dans le service </h2>
+  @if(news){
+  <app-news-list [newsList]="news" />
+  }
+
+  <h2>Exemple en chargeant les données via requete Http 'get'</h2>
+
+  @if(newsViaHttp().length > 0){
+  <app-news-list [newsList]="newsViaHttp()" />
+  }
+
+</section>
