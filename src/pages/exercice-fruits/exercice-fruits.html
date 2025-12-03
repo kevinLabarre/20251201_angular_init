@@ -2,9 +2,9 @@
   <h1>Exercice fruits et légumes</h1>
   <app-consigne-exercice-fruits />
 
-  <!-- Appeler deux fois un composant 'list'
-  <app-list [data]=fruits/>
-  <app-list [data]=legumes/>
-  -->
+  <input type="checkbox" [(ngModel)]="checkBoxValue" (ngModelChange)="handleCheck()" />
+  <span>Afficher hors stock</span>
+  <app-products-list [products]="fruits" />
+  <app-products-list [products]="legumes" />
 
 </section>
