@@ -1,0 +1,29 @@
+<section>
+  <h1>Les inputs avec 'ngModel'</h1>
+
+  <h2>Exemple 1 (ngModel)</h2>
+
+  <input type="text" [(ngModel)]="name">
+  <button (click)="handleReset()">Reset</button>
+  <p>{{ name }}</p>
+  <br>
+
+  <h2>Exemple 2 (ngModel + ngModelChange)</h2>
+
+  <!-- Avec ngModel, nous pouvons utiliser également ngModelChange
+  Attention ! ngModelChange ne fonctionne pas si on n'utilise pas [(ngModel)]
+  -->
+  <input type="text" [(ngModel)]="search" (ngModelChange)="handleSearchChange()">
+
+  <h2>Exemple 3 (cas pratique: afficher / masquer un élément)</h2>
+  <input type="checkbox" [(ngModel)]="checkBoxValue" />
+
+  @if(checkBoxValue){
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo eius similique asperiores, cupiditate saepe,
+    aspernatur fuga ipsa perspiciatis voluptas adipisci, porro maiores repellendus eligendi autem at distinctio. Ipsam,
+    id saepe.
+    Fugit, maxime, eaque est quam corrupti incidunt dolorem voluptatibus mollitia illum ex sunt sapiente iusto, odio
+    voluptatum corporis perferendis iure voluptas ut non totam maiores. Obcaecati earum architecto modi nam.</p>
+  }
+
+</section>

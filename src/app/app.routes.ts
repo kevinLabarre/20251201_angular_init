@@ -5,6 +5,8 @@ import { BindDesProprietesEtEvenements } from '../pages/bind-des-proprietes-et-e
 import { PassageDeDonneesEntreComposants } from '../pages/passage-de-donnees-entre-composants/passage-de-donnees-entre-composants';
 import { Compteur } from '../pages/compteur/compteur';
 import { EffectEtComputed } from '../pages/effect-et-computed/effect-et-computed';
+import { InputAvecNgModel } from '../pages/input-avec-ng-model/input-avec-ng-model';
+import { ExerciceFruits } from '../pages/exercice-fruits/exercice-fruits';
 
 export const routes: Routes = [
   { path: "", component: HomePage, title: "Accueil" },
@@ -12,5 +14,7 @@ export const routes: Routes = [
   { path: "bind-proprietes-et-evenements", component: BindDesProprietesEtEvenements, title: "bind proprietes et evenements" },
   { path: "passage-de-donnees-entre-composants", component: PassageDeDonneesEntreComposants, title: "Passage de données entre composants" },
   { path: "compteur", component: Compteur, title: "compteur" },
-  { path: "effect-et-computed", component: EffectEtComputed, title: "effect et computed" }
+  { path: "effect-et-computed", component: EffectEtComputed, title: "effect et computed" },
+  { path: "input-avec-ngModel", component: InputAvecNgModel, title: "input avec ngModel" },
+  { path: "exercice-fruits", component: ExerciceFruits, title: "Exercice fruits / légumes" }
 ];

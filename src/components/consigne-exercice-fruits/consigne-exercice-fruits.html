@@ -1,0 +1,28 @@
+<section>
+  <pre>
+        - Créer un composant 'liste' (ou tableau) pour afficher mes produits
+
+        - Appeler deux fois le composant enfant
+          -> Le premier tableau affiche les fruits
+          -> Le second affiche les légumes
+            (pour trier, on peut utiliser le .filter().
+            https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
+        - Ajouter une case à cocher pour masquer/afficher les produits qui ne sont plus en stock (propriété 'quantite')
+            ( on peut aussi faire le tri avec .filter(). Pour afficher/masquer vous pouvez utiliser un ngModel )
+
+        {{"
+        produits: any[] = [
+        { id: 1, nom: 'Pomme', quantite: 0, type: 'fruit', prix: 1.2 },
+        { id: 2, nom: 'Banane', quantite: 6, type: 'fruit', prix: 0.9 },
+        { id: 3, nom: 'Orange', quantite: 8, type: 'fruit', prix: 1.5 },
+        { id: 4, nom: 'Fraise', quantite: 20, type: 'fruit', prix: 2.5 },
+        { id: 5, nom: 'Carotte', quantite: 0, type: 'legume', prix: 0.8 },
+        { id: 6, nom: 'Tomate', quantite: 12, type: 'legume', prix: 1.0 },
+        { id: 7, nom: 'Poivron', quantite: 5, type: 'legume', prix: 1.3 },
+        { id: 8, nom: 'Brocoli', quantite: 0, type: 'legume', prix: 1.8 }
+        ];
+        "
+        }}
+  </pre>
+</section>
