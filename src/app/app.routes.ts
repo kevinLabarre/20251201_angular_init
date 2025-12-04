@@ -9,6 +9,7 @@ import { InputAvecNgModel } from '../pages/input-avec-ng-model/input-avec-ng-mod
 import { ExerciceFruits } from '../pages/exercice-fruits/exercice-fruits';
 import { RequeteApi } from '../pages/requete-api/requete-api';
 import { ServicePage } from '../pages/service-page/service-page';
+import { Formulaire } from '../pages/formulaire/formulaire';
 
 export const routes: Routes = [
   { path: "", component: HomePage, title: "Accueil" },
@@ -20,5 +21,6 @@ export const routes: Routes = [
   { path: "input-avec-ngModel", component: InputAvecNgModel, title: "input avec ngModel" },
   { path: "exercice-fruits", component: ExerciceFruits, title: "Exercice fruits / légumes" },
   { path: "requete-api", component: RequeteApi, title: "les requetes Api" },
-  { path: "service", component: ServicePage, title: "les services" }
+  { path: "service", component: ServicePage, title: "les services" },
+  { path: "formulaire", component: Formulaire, title: "les formulaires" }
 ];

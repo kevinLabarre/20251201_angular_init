@@ -4,10 +4,11 @@ import { INews } from '../../interfaces/INews';
 import { NewsList } from "../../components/news-list/news-list";
 import { NewsService } from '../../services/news/news-service';
 import { AddProduct } from "../../components/add-product/add-product";
+import { AddProductWithControls } from "../../components/add-product-with-controls/add-product-with-controls";
 
 @Component({
   selector: 'app-requete-api',
-  imports: [NewsList, AddProduct],
+  imports: [NewsList, AddProduct, AddProductWithControls],
   templateUrl: './requete-api.html',
   styleUrl: './requete-api.css',
 })
