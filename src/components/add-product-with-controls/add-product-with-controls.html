@@ -1,1 +1,28 @@
-<p>add-product-with-controls works!</p>
+<div>
+
+  <form [formGroup]="newsForm" (ngSubmit)="handleSubmit()">
+
+    <input type="text" placeHolder="titre" formControlName="titre">
+    @if(titleError && getTouched('titre')){
+    <span>{{titleError}}</span>
+    }
+
+    <input type="text" placeHolder="Decription" formControlName="texte">
+    @if(getRequiredError('texte') && getTouched('texte') ){
+    <span>le texte est obligatoire</span>
+    }
+
+    <input type="text" placeHolder="catégorie" formControlName="categorie">
+    @if(getRequiredError('categorie') && getTouched('categorie')){
+    <span>la catégorie est obligatoire</span>
+    }
+
+    <input type="text" placeHolder="image" formControlName="image">
+    @if(getRequiredError('image') && getTouched('image')){
+    <span>l'image est obligatoire</span>
+    }
+
+    <button>Ajouter</button>
+  </form>
+
+</div>
