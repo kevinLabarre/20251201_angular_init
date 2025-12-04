@@ -50,4 +50,14 @@ export class RequeteApi {
     })
   }
 
+  handleAddOneNews(news: INews) {
+    if (this.news) {
+      // Exemple mise à jour d'une variable classique
+      this.news = [...this.news, news]
+
+      // Exemple mise à jour de notre signal
+      this.newsSignal.update((prev) => [...prev, news])
+    }
+  }
+
 }

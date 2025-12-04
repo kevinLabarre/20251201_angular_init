@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { INews } from '../../interfaces/INews';
 import { NewsService } from '../../services/news/news-service';
@@ -11,13 +11,15 @@ import { NewsService } from '../../services/news/news-service';
 })
 export class AddProductWithControls {
 
+  @Output() handleAdd = new EventEmitter<INews>()
+
   constructor(private newsService: NewsService) { }
 
   newsForm = new FormGroup({
     titre: new FormControl("", [Validators.required, Validators.maxLength(10)]),
     texte: new FormControl("", Validators.required),
     categorie: new FormControl("", Validators.required),
-    image: new FormControl("", Validators.required),
+    image: new FormControl("", Validators.required)
   })
 
   get titleError() {
@@ -81,7 +83,11 @@ export class AddProductWithControls {
         dateModification: null
       }
 
-      this.newsService.addOneNews(news).subscribe(resp => console.log("produit ajouté: ", resp))
+      this.newsService.addOneNews(news).subscribe({
+        next: (resp) => this.handleAdd.emit(resp),
+        error: (e) => console.error(e)
+      })
+
     } else this.newsForm.markAllAsTouched()
   }
 
